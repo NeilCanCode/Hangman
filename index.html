@@ -1,4 +1,43 @@
-import random
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Output</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .code-block {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }
+        .output {
+            font-weight: bold;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Python Output</h1>
+        <div class="code-block">
+            import random
 
 stages = ['''
   +---+
@@ -334,4 +373,28 @@ while not game_over:
         print("****************************YOU WIN****************************")
 
     print(stages[lives])
+
+
+            <pre>
+                print("Hello, World!")
+            </pre>
+        </div>
+        <div class="output">
+            <!-- Python output will be dynamically inserted here -->
+            <p id="result"> </p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code to fetch Python output and display it in the "result" element
+        // This would typically involve a server-side component to execute the Python code
+        // and send the result back to the browser
+        fetch('/python-script') // Replace with your endpoint
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('result').textContent = data;
+            });
+    </script>
+</body>
+</html>
 
